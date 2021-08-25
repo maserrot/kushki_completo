@@ -1,0 +1,228 @@
+{
+	"info": {
+		"_postman_id": "52da7dc2-437c-448c-82a0-8619797fbaea",
+		"name": "kushki",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/preAuthorization",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"token\": \"e1eb653a42174dac9a2f8d75f0a05582\",\n  \"amount\": {\n    \"subtotalIva\": 0,\n    \"subtotalIva0\": 15,\n    \"ice\": 0,\n    \"iva\": 0,\n    \"currency\": \"USD\"\n  },\n  \"fullResponse\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/preAuthorization",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"preAuthorization"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/capture",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"ticketNumber\": \"935323410355610540\",\n  \"amount\": {\n    \"currency\": \"USD\",\n    \"subtotalIva\": 0,\n    \"iva\": 0,\n    \"subtotalIva0\": 15,\n    \"ice\": 0\n  },\n  \"fullResponse\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/capture",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"capture"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/subscriptions",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"token\": \"54c9f1a7c644450896f2cf04eb0ee10b\",\n  \"planName\": \"Premium\",\n  \"periodicity\": \"monthly\",\n  \"contactDetails\": {\n    \"documentType\": \"CC\",\n    \"documentNumber\": \"1009283738\",\n    \"email\": \"test@test.com\",\n    \"firstName\": \"Diego\",\n    \"lastName\": \"Cadena\",\n    \"phoneNumber\": \"+593988734644\"\n  },\n  \"amount\": {\n    \"subtotalIva\": 15,\n    \"subtotalIva0\": 0,\n    \"ice\": 0,\n    \"iva\": 0,\n    \"currency\": \"USD\"\n  },\n  \"startDate\": \"2021-08-23\",\n  \"metadata\": {\n    \"plan\": {\n      \"fitness\": {\n        \"cardio\": \"include\",\n        \"rumba\": \"include\",\n        \"pool\": \"include\"\n      }\n    }\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/subscriptions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"subscriptions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/preAuthorization/1629857422039000",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"amount\": {\n    \"ice\": 0,\n    \"iva\": 0,\n    \"subtotalIva\": 0,\n    \"subtotalIva0\": 15,\n    \"currency\": \"USD\"\n  },\n  \"name\": \"Juan\",\n  \"lastName\": \"Perez\",\n  \"email\": \"test@yourdomain.com\",\n  \"fullResponse\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/preAuthorization/1629906697211000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"preAuthorization",
+						"1629906697211000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/capture/1629857422039000",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"ticketNumber\": \"649189199194988993\",\n  \"amount\": {\n    \"currency\": \"USD\",\n    \"subtotalIva\": 0,\n    \"iva\": 0,\n    \"subtotalIva0\": 15,\n    \"ice\": 0\n  },\n  \"fullResponse\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/capture/1629906697211000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"capture",
+						"1629906697211000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/info/1629857422039000",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/info/1629906697211000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"info",
+						"1629906697211000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/void/541494518465946108",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"fullResponse\": true,\n  \"amount\": {\n    \"subtotalIva\": 15,\n    \"subtotalIva0\": 0,\n    \"ice\": 0,\n    \"iva\": 0,\n    \"currency\": \"USD\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/void/541494518465946108",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"void",
+						"541494518465946108"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/transactions",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"from\": \"2021-08-01T00:00:00\",\n    \"to\": \"2021-08-31T23:59:59\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/transactions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
