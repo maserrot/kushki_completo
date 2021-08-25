@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Checkout1</title>
+        <script src="https://cdn.kushkipagos.com/kushki-checkout.js"></script>    
+    </head>
+    <body>
+        <h2>Prueba de token</h2>
+
+        <p id="demo"></p>
+
+        <script type="text/javascript">
+          const queryString = window.location.search;
+          console.log(queryString);
+          const urlParams = new URLSearchParams(queryString);
+          const kushkiToken = urlParams.get('kushkiToken')
+          console.log(kushkiToken);
+          document.getElementById("demo").innerHTML = 
+          "El token es:<br>" + kushkiToken;
+        </script>
+    </body>
+</html>
